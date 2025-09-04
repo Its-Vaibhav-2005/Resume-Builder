@@ -62,7 +62,7 @@ def login():
     ), 200
 
 @authBp.route('/profile', methods=['GET'])
-@jwt_required
+@jwt_required()
 def profile():
     userId = get_jwt_identity()
     user = getUserById(userId)
